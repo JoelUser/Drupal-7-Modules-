@@ -85,7 +85,7 @@ function money_format_field_formatter_view($entity_type, $entity, $field, $insta
         case 'fd':
             foreach ($items as $delta => $item)
             {
-                $output = "<span class='money-label'>USD $</span>" . money_format_split($item["value"]);
+                $output = "<span class='money-label'>USD $ </span>" . money_format_split($item["value"]);
                 $element[$delta] = array('#markup' => $output);
             }
             break;
@@ -112,8 +112,8 @@ function money_format_field_formatter_view($entity_type, $entity, $field, $insta
             break;
         case 'sb':
             foreach ($items as $delta => $item)
-            {
-                $output = "<span class='money-label'>S/</span>".$item["value"];
+            {                
+                $output = "<span class='money-label'>S/. </span>" . money_format_split($item["value"]);
                 $element[$delta] = array('#markup' => $output);
             }
             break;
